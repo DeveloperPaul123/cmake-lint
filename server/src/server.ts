@@ -75,7 +75,7 @@ function validateTextDocument(textDocument: TextDocument): void {
 		let line = lines[i];
 		let index = line.indexOf('$');
 		let end_index = line.indexOf('}')
-		if (index >= 0) {
+		if (index >= 0 && end_index >=0) {
 			problems++;
 
 			let diagnosic: Diagnostic = {
